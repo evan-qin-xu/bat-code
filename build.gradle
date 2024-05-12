@@ -13,7 +13,8 @@ spotless {
     java {
         importOrder()
         removeUnusedImports()
-        googleJavaFormat('1.22.0').aosp().reflowLongStrings().skipJavadocFormatting()
+        googleJavaFormat('1.22.0').aosp().reflowLongStrings()
+                .skipJavadocFormatting().formatJavadoc(true).reorderImports(true)
         formatAnnotations()
     }
 }
